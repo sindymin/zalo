@@ -1,0 +1,16 @@
+apply plugin: 'com.android.application'
+android {
+    namespace 'com.example.zaloweb'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.example.zaloweb"
+        minSdk 23
+        targetSdk 23
+        versionCode 1
+        versionName "1.0"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
