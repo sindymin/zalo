@@ -107,7 +107,7 @@ public class CheckReceiver extends BroadcastReceiver {
     private void handle(Context c, String raw) {
         try {
             if (raw == null || raw.equals("null")) return;
-            Object v = new JSONTokener(raw).nextValue();      // giải mã chuỗi JSON (gồm \uXXXX)
+            Object v = new JSONTokener(raw).nextValue();      // giải mã chuỗi JSON (gồm cả ký tự unicode)
             JSONObject o = new JSONObject(String.valueOf(v));
             SharedPreferences sp = c.getSharedPreferences("zalo", Context.MODE_PRIVATE);
 
